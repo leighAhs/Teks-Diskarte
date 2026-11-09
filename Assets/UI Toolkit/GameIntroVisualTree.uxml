@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=ad3fc3dc057d1894c9baf68c7fd720f9&amp;type=3#MainMenuStyle" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:Label text="Teks Diskarte" name="GameTitle" class="header" />
+        <ui:Button text="Play" name="PlayButton" class="button" style="background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-bottom-width: 0; border-left-width: 0; border-right-width: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

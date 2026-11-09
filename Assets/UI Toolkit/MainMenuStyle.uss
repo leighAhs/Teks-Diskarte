@@ -1,0 +1,26 @@
+.header {
+    color: rgb(200, 107, 29);
+    font-size: 180px;
+    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Fonts/Titan_One/TitanOne-Regular.ttf?fileID=12800000&guid=c8cf7e55c5f0666408b8b0597ca42dd0&type=3#TitanOne-Regular");
+    -unity-text-align: upper-center;
+    top: 180px;
+}
+
+.button {
+    font-size: 130px;
+    width: 600px;
+    height: 160px;
+    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Fonts/Titan_One/TitanOne-Regular.ttf?fileID=12800000&guid=c8cf7e55c5f0666408b8b0597ca42dd0&type=3#TitanOne-Regular");
+    align-self: center;
+    margin-top: 0;
+    top: 200px;
+    visibility: visible;
+    color: rgb(200, 107, 29);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.button:hover {
+    font-size: 150px;
+    background-color: rgb(200, 107, 29);
+}
