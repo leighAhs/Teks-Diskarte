@@ -12,3 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2c8a3656626ee74a9bca2adb65a2aef, type: 3}
   m_Name: PlayersSetting
   m_EditorClassIdentifier: 
+  gamePlayerData:
+  - name: Bot Data
+    currentTotalCards: 0
+    currentCards: []
+    totalCards: []
+  - name: Player Data
+    currentTotalCards: 0
+    currentCards: []
+    totalCards: []
