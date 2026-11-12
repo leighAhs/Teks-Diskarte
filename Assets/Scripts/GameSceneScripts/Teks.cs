@@ -9,6 +9,13 @@ public class Teks : MonoBehaviour
     GameObject target;
 
     public static bool onDrop;
+
+    [Header("Teks Properties")]
+    [SerializeField] public string rarity;
+    [SerializeField] public string ability;
+    [SerializeField] public int attackCount;
+    [SerializeField] public int blockCOunt;
+    [SerializeField] public int addLifeCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,14 +26,6 @@ public class Teks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Mouse0))
-        //{
-        //    Debug.Log("Mouse0 key pressed");
-        //    anim.Play("TeksRotation");
-        //}
-        //if(onDrop)
-        //{
-        //}
         Debug.Log("onDrop: " + onDrop);
         if (target != null && onDrop)
         {
@@ -40,18 +39,18 @@ public class Teks : MonoBehaviour
         if(transform.position == target.transform.position)
         {
             onDrop = false;
+            Invoke("destroy", 3f);
         }
-
-
-        //if (transform.position == playDropTeksPosition.transform.position)
-        //{
-        //    onDrop = false;
-        //}
     }
 
     private void OnMouseDown()
     {
         Debug.Log("Mouse0 key pressed");
         anim.Play("TeksRotation");
+    }
+    
+    void destroy()
+    {
+        Destroy(gameObject);    
     }
 }
