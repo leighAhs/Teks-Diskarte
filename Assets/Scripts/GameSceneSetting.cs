@@ -18,6 +18,7 @@ public class GameSceneSetting : ScriptableObject
         }
     }
     public GamePlayerData[] gamePlayerData;
+    public TeksCardsData[] teksCardData;
 }
 
 [System.Serializable]
@@ -27,4 +28,15 @@ public class GamePlayerData
     public int currentTotalCards;
     public List<GameObject> currentCards;
     public List<GameObject> totalCards;
+}
+
+[System.Serializable]
+public class TeksCardsData
+{
+    public string cardHolderName;
+    public string cardRarity;
+    public string teksAbility;
+    public int attackCount;
+    public int blockCount;
+    public int healCount;
 }

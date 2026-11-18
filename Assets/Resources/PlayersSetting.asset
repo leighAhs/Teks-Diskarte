@@ -21,3 +21,16 @@ MonoBehaviour:
     currentTotalCards: 0
     currentCards: []
     totalCards: []
+  teksCardData:
+  - cardHolderName: Player
+    cardRarity: 
+    teksAbility: 
+    attackCount: 0
+    blockCount: 0
+    healCount: 0
+  - cardHolderName: Enemy
+    cardRarity: 
+    teksAbility: 
+    attackCount: 0
+    blockCount: 0
+    healCount: 0

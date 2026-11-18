@@ -1,44 +1,55 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Teks : MonoBehaviour
 {
     Animator anim;
 
-    GameObject target;
+    GameObject playerDropTeksPosition;
 
-    public static bool onDrop;
+    public static bool playerOnDrop;
+    public static bool enemyOnDrop;
 
     [Header("Teks Properties")]
     [SerializeField] public string rarity;
     [SerializeField] public string ability;
     [SerializeField] public int attackCount;
-    [SerializeField] public int blockCOunt;
+    [SerializeField] public int blockCount;
     [SerializeField] public int addLifeCount;
+
+    GameObject buttonObject;
+    Button button;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         anim = GetComponent<Animator>();
-        target = GameObject.Find("PlayerDropTeksPosition");
+        playerDropTeksPosition = GameObject.Find("PlayerDropTeksPosition");
+
+        buttonObject = GameObject.Find("Button");
+        button = buttonObject.GetComponent<Button>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("onDrop: " + onDrop);
-        if (target != null && onDrop)
+
+        if (gameObject.name == "PlayerTeks")
         {
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                target.transform.position,
-                1f * Time.deltaTime
-            );
+            if (playerDropTeksPosition != null && playerOnDrop)
+            {
+                button.enabled = false;
+                transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    playerDropTeksPosition.transform.position,
+                    4f * Time.deltaTime
+                );
+            }
         }
 
-        if(transform.position == target.transform.position)
+        if (transform.position == playerDropTeksPosition.transform.position)
         {
-            onDrop = false;
+            GameController.enemyTurn = true;
+            playerOnDrop = false;
             Invoke("destroy", 3f);
         }
     }
@@ -48,9 +59,10 @@ public class Teks : MonoBehaviour
         Debug.Log("Mouse0 key pressed");
         anim.Play("TeksRotation");
     }
-    
+
     void destroy()
     {
-        Destroy(gameObject);    
+        button.enabled = true;
+        Destroy(gameObject);
     }
 }
