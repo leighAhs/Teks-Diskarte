@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86415675}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: CurrentTeksDataContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1669,6 +1669,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Uncommon
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: blockCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -2051,7 +2063,7 @@ GameObject:
   - component: {fileID: 1061445875}
   - component: {fileID: 1061445874}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI-----------------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2153,6 +2165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1067336240}
+  - component: {fileID: 1067336241}
   m_Layer: 0
   m_Name: GameData
   m_TagString: Untagged
@@ -2175,6 +2188,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1067336241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067336239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09468309297bc3d4d89b8f77c08a5a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLife: {fileID: 1363558116}
+  enemyLife: {fileID: 1965855006}
+  playerCardRarity: {fileID: 1943772737}
+  playerTeksAbility: {fileID: 919901430}
+  playerTeksAbilityCount: {fileID: 669078887}
+  enemyCardRarity: {fileID: 311240331}
+  enemyTeksAbility: {fileID: 1720245234}
+  enemyTeksAbilityCount: {fileID: 1501126989}
 --- !u!1001 &1205973048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2183,6 +2216,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Uncommon
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: blockCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -2742,6 +2787,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Epic
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Attack and Block
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: blockCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: attackCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -3639,6 +3700,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Special
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Heal
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: addLifeCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -3870,6 +3943,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Common
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: block
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: blockCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: attackCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -4066,6 +4155,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Common
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: attackCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -4747,6 +4848,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Uncommon
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: attackCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -4835,6 +4948,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Epic
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Heal and Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: attackCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: addLifeCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -4976,6 +5105,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Special
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Heal
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: addLifeCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -5815,6 +5956,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1936374675}
     m_Modifications:
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: rarity
+      value: Uncommon
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: ability
+      value: Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: -215031279312005618, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
+      propertyPath: attackCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5671066430881222186, guid: c67809c06a11b8a4d9e788bceb0cd1de, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5

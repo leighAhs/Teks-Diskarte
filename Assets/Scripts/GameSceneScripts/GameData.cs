@@ -21,6 +21,11 @@ public class GameData : MonoBehaviour
     [SerializeField] TextMeshProUGUI playerCardRarity;
     [SerializeField] TextMeshProUGUI playerTeksAbility;
     [SerializeField] TextMeshProUGUI playerTeksAbilityCount;
+
+    [Header("Enemy Teks Data")]
+    [SerializeField] TextMeshProUGUI enemyCardRarity;
+    [SerializeField] TextMeshProUGUI enemyTeksAbility;
+    [SerializeField] TextMeshProUGUI enemyTeksAbilityCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,15 +36,20 @@ public class GameData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        PlayerTeksDataChecker();
+        EnemyTeksDataChecker();
     }
 
     void PlayerTeksDataChecker()
     {
         playerTeks = GameObject.Find("PlayerTeks");
 
-        playerTeksScript = playerTeks.GetComponent<Teks>();
-        enemyTeksScript = playerTeks.GetComponent<Teks>();
+
+        if (playerTeks != null)
+        {
+            playerTeksScript = playerTeks.GetComponent<Teks>();
+        }
+        
 
 
         if(playerTeks != null)
@@ -70,30 +80,36 @@ public class GameData : MonoBehaviour
 
     void EnemyTeksDataChecker()
     {
-        playerTeks = GameObject.Find("PlayerTeks");
         enemyTeks = GameObject.Find("EnemyTeks");
 
-        playerTeksScript = playerTeks.GetComponent<Teks>();
-        enemyTeksScript = playerTeks.GetComponent<Teks>();
+        if (enemyTeks != null)
+        {
+            enemyTeksScript = enemyTeks.GetComponent<Teks>();
+        }
 
-        string rarity = playerTeksScript.rarity;
-        string ability = playerTeksScript.ability;
+        string rarity = enemyTeksScript.rarity;
+        string ability = enemyTeksScript.ability;
         int abilityCount = 0;
 
-        if (ability.Contains("Attack", StringComparison.OrdinalIgnoreCase))
+        if (enemyTeks != null)
         {
-            abilityCount = playerTeksScript.attackCount;
-        }
-        else if (ability.Contains("Block", StringComparison.OrdinalIgnoreCase))
-        {
-            abilityCount = playerTeksScript.blockCount;
+            if (ability.Contains("Attack", StringComparison.OrdinalIgnoreCase))
+            {
+                abilityCount = enemyTeksScript.attackCount;
+            }
+            else if (ability.Contains("Block", StringComparison.OrdinalIgnoreCase))
+            {
+                abilityCount = enemyTeksScript.blockCount;
 
-        }
-        else if (ability.Contains("Heal", StringComparison.OrdinalIgnoreCase))
-        {
-            abilityCount = playerTeksScript.addLifeCount;
+            }
+            else if (ability.Contains("Heal", StringComparison.OrdinalIgnoreCase))
+            {
+                abilityCount = enemyTeksScript.addLifeCount;
+            }
         }
 
-
+        enemyCardRarity.text = rarity;
+        enemyTeksAbility.text = ability;
+        enemyTeksAbilityCount.text = abilityCount.ToString();
     }
 }
