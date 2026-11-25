@@ -184,4 +184,22 @@ public class GameController : MonoBehaviour
             Destroy(enemyTeks, 0.3f);
         }
     }
+
+    void gameData()
+    {
+        string bot = GameSceneSetting.data.gamePlayerData[0].name;
+        string player = GameSceneSetting.data.gamePlayerData[1].name;
+
+        if (bot != null)
+        {
+            GameSceneSetting.data.gamePlayerData[0].currentTotalCards = enemyTeksDeck.transform.childCount;
+        }
+
+        if (player != null)
+        {
+            GameSceneSetting.data.gamePlayerData[0].currentTotalCards = playerTeksDeck.transform.childCount;
+        }
+
+        
+    }
 }

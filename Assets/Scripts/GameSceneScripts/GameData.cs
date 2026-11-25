@@ -49,10 +49,8 @@ public class GameData : MonoBehaviour
         {
             playerTeksScript = playerTeks.GetComponent<Teks>();
         }
-        
 
-
-        if(playerTeks != null)
+        if (playerTeks != null)
         {
             string rarity = playerTeksScript.rarity;
             string ability = playerTeksScript.ability;
@@ -71,6 +69,17 @@ public class GameData : MonoBehaviour
             {
                 abilityCount = playerTeksScript.addLifeCount;
             }
+            if (rarity.Contains("Epic", StringComparison.OrdinalIgnoreCase))
+            {
+                Debug.Log("shs");
+                playerTeksAbilityCount.enabled = false;
+            }
+
+            GameSceneSetting.data.teksCardData[0].cardRarity = rarity;
+            GameSceneSetting.data.teksCardData[0].teksAbility = ability;
+            GameSceneSetting.data.teksCardData[0].attackCount = playerTeksScript.attackCount;
+            GameSceneSetting.data.teksCardData[0].blockCount = playerTeksScript.blockCount;
+            GameSceneSetting.data.teksCardData[0].healCount = playerTeksScript.addLifeCount;
 
             playerCardRarity.text = rarity;
             playerTeksAbility.text = ability;
@@ -87,12 +96,13 @@ public class GameData : MonoBehaviour
             enemyTeksScript = enemyTeks.GetComponent<Teks>();
         }
 
-        string rarity = enemyTeksScript.rarity;
-        string ability = enemyTeksScript.ability;
-        int abilityCount = 0;
-
         if (enemyTeks != null)
         {
+
+            string rarity = enemyTeksScript.rarity;
+            string ability = enemyTeksScript.ability;
+            int abilityCount = 0;
+
             if (ability.Contains("Attack", StringComparison.OrdinalIgnoreCase))
             {
                 abilityCount = enemyTeksScript.attackCount;
@@ -106,10 +116,22 @@ public class GameData : MonoBehaviour
             {
                 abilityCount = enemyTeksScript.addLifeCount;
             }
+            if (rarity.Contains("Epic", StringComparison.OrdinalIgnoreCase))
+            {
+                enemyTeksAbilityCount.enabled = false;
+            }
+
+            GameSceneSetting.data.teksCardData[1].cardRarity = rarity;
+            GameSceneSetting.data.teksCardData[1].teksAbility = ability;
+            GameSceneSetting.data.teksCardData[1].attackCount = playerTeksScript.attackCount;
+            GameSceneSetting.data.teksCardData[1].blockCount = playerTeksScript.blockCount;
+            GameSceneSetting.data.teksCardData[1].healCount = playerTeksScript.addLifeCount;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ].healCount = playerTeksScript.addLifeCount;
+
+            enemyCardRarity.text = rarity;
+            enemyTeksAbility.text = ability;
+            enemyTeksAbilityCount.text = abilityCount.ToString();
         }
 
-        enemyCardRarity.text = rarity;
-        enemyTeksAbility.text = ability;
-        enemyTeksAbilityCount.text = abilityCount.ToString();
+
     }
 }
