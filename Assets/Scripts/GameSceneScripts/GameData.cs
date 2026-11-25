@@ -21,11 +21,22 @@ public class GameData : MonoBehaviour
     [SerializeField] TextMeshProUGUI playerCardRarity;
     [SerializeField] TextMeshProUGUI playerTeksAbility;
     [SerializeField] TextMeshProUGUI playerTeksAbilityCount;
+    string playerteksRarity;
+    string playerteksTeksAbility;
+    int playerteksAttackCount;
+    int playerteksBlockCount;
+    int playerteksHealCount;
+
 
     [Header("Enemy Teks Data")]
     [SerializeField] TextMeshProUGUI enemyCardRarity;
     [SerializeField] TextMeshProUGUI enemyTeksAbility;
     [SerializeField] TextMeshProUGUI enemyTeksAbilityCount;
+    string enemyteksRarity;
+    string enemyteksTeksAbility;
+    int enemyteksAttackCount;
+    int enemyteksBlockCount;
+    int enemyteksHealCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,7 +61,7 @@ public class GameData : MonoBehaviour
             playerTeksScript = playerTeks.GetComponent<Teks>();
         }
 
-        if (playerTeks != null)
+        if (playerTeksScript != null)
         {
             string rarity = playerTeksScript.rarity;
             string ability = playerTeksScript.ability;
@@ -71,20 +82,14 @@ public class GameData : MonoBehaviour
             }
             if (rarity.Contains("Epic", StringComparison.OrdinalIgnoreCase))
             {
-                Debug.Log("shs");
                 playerTeksAbilityCount.enabled = false;
             }
-
-            GameSceneSetting.data.teksCardData[0].cardRarity = rarity;
-            GameSceneSetting.data.teksCardData[0].teksAbility = ability;
-            GameSceneSetting.data.teksCardData[0].attackCount = playerTeksScript.attackCount;
-            GameSceneSetting.data.teksCardData[0].blockCount = playerTeksScript.blockCount;
-            GameSceneSetting.data.teksCardData[0].healCount = playerTeksScript.addLifeCount;
 
             playerCardRarity.text = rarity;
             playerTeksAbility.text = ability;
             playerTeksAbilityCount.text = abilityCount.ToString();
         }
+
     }
 
     void EnemyTeksDataChecker()
@@ -96,7 +101,7 @@ public class GameData : MonoBehaviour
             enemyTeksScript = enemyTeks.GetComponent<Teks>();
         }
 
-        if (enemyTeks != null)
+        if (enemyTeksScript != null)
         {
 
             string rarity = enemyTeksScript.rarity;
@@ -121,17 +126,10 @@ public class GameData : MonoBehaviour
                 enemyTeksAbilityCount.enabled = false;
             }
 
-            GameSceneSetting.data.teksCardData[1].cardRarity = rarity;
-            GameSceneSetting.data.teksCardData[1].teksAbility = ability;
-            GameSceneSetting.data.teksCardData[1].attackCount = playerTeksScript.attackCount;
-            GameSceneSetting.data.teksCardData[1].blockCount = playerTeksScript.blockCount;
-            GameSceneSetting.data.teksCardData[1].healCount = playerTeksScript.addLifeCount;
-
             enemyCardRarity.text = rarity;
             enemyTeksAbility.text = ability;
             enemyTeksAbilityCount.text = abilityCount.ToString();
         }
-
 
     }
 }

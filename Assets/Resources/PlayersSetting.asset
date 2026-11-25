@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlayersSetting
   m_EditorClassIdentifier: 
   gamePlayerData:
-  - name: Bo
+  - name: Bot
     currentTotalCards: 0
     currentCards: []
     totalCards: []

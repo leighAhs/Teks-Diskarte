@@ -46,7 +46,7 @@ public class Teks : MonoBehaviour
             }
         }
 
-        if (transform.position == playerDropTeksPosition.transform.position)
+        if (playerDropTeksPosition != null && transform.position == playerDropTeksPosition.transform.position)
         {
             GameController.enemyTurn = true;
             playerOnDrop = false;

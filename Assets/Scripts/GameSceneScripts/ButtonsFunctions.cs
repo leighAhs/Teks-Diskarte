@@ -59,4 +59,9 @@ public class ButtonFunctions : MonoBehaviour
             GameController.enemyIsDropping = true;
         }
     }
+
+    void OnPanelButtonClick()
+    {
+
+    }
 }
