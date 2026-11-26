@@ -21,22 +21,12 @@ public class GameData : MonoBehaviour
     [SerializeField] TextMeshProUGUI playerCardRarity;
     [SerializeField] TextMeshProUGUI playerTeksAbility;
     [SerializeField] TextMeshProUGUI playerTeksAbilityCount;
-    string playerteksRarity;
-    string playerteksTeksAbility;
-    int playerteksAttackCount;
-    int playerteksBlockCount;
-    int playerteksHealCount;
 
 
     [Header("Enemy Teks Data")]
     [SerializeField] TextMeshProUGUI enemyCardRarity;
     [SerializeField] TextMeshProUGUI enemyTeksAbility;
     [SerializeField] TextMeshProUGUI enemyTeksAbilityCount;
-    string enemyteksRarity;
-    string enemyteksTeksAbility;
-    int enemyteksAttackCount;
-    int enemyteksBlockCount;
-    int enemyteksHealCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
