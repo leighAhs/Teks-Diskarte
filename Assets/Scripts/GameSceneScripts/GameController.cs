@@ -49,6 +49,9 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+
+        gameData();
+
         int randomNum = UnityEngine.Random.Range(1, 3);
         firstThrower = randomNum;
 
@@ -187,17 +190,18 @@ public class GameController : MonoBehaviour
 
     void gameData()
     {
-        string bot = GameSceneSetting.data.gamePlayerData[0].name;
-        string player = GameSceneSetting.data.gamePlayerData[1].name;
 
-        if (bot != null)
+        enemyTeks = GameObject.Find("EnemyTeks");
+        playerTeks = GameObject.Find("PlayerTeks");
+
+        if (enemyTeksDeck != null)
         {
             GameSceneSetting.data.gamePlayerData[0].currentTotalCards = enemyTeksDeck.transform.childCount;
         }
 
-        if (player != null)
+        if (playerTeksDeck != null)
         {
-            GameSceneSetting.data.gamePlayerData[0].currentTotalCards = playerTeksDeck.transform.childCount;
+            GameSceneSetting.data.gamePlayerData[1].currentTotalCards = playerTeksDeck.transform.childCount;
         }
 
         

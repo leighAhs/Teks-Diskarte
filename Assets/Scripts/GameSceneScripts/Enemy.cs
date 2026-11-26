@@ -15,7 +15,6 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         enemyTurn();
-        Debug.Log("ENEMY SCRIPT; EnemyTurn: " + GameController.enemyTurn);
     }
 
     void enemyTurn()
